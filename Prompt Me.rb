@@ -6,18 +6,17 @@
 # For now, it just asks if they want a prompt.
 
 loop do
-print "Want a prompt?"
-prompt = gets.chomp()
-if prompt == "yes"
+  print "Want a prompt?"
+  prompt = gets.chomp
 
-prompts = [
-"Believe in me as I...",
-"As the bullet shatters my cranium, I think...",
-"I feel a little schaudenfreude when...",
-"I think back to a time when..."
-]
-
-print prompts.sample
-end
-break if prompt != "yes"
+  if prompt == "yes"
+    prompts = [
+      "Believe in me as I...",
+      "As the bullet shatters my cranium, I think...",
+      "I feel a little schaudenfreude when...",
+      "I think back to a time when..."
+    ]
+    print prompts.sample
+  end
+  break if prompt != "yes"
 end
